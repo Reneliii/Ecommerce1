@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Ecommerce </title>
+		<meta charset = "UTF=8" />
+		<meta name = "viewport" content = "width = device-width, initial-scale = 1" />
+		<link rel = "stylesheet" href= "style.css">
+	</head>
+	<body>
+		<header>
+			<a href = "#" class = "logo"> Ecommerce Book </a>
+			<ul>
+				<li><a href = "#" class = "active">HOME</a></li>
+				<li><a href = "#hobby">Company Details</a></li>
+				<li><a href = "cart.html">Products</a></li>
+			</ul>
+		</header>
+		<section class = "images">
+			<img src = "stars.png" id = "stars">
+			<img src = "moon.png" id = "moon">
+			<img src = "mountains_behind.png" id = "mountains_behind">
+			<h2 id = "text"> Welcome </h2>
+			<a href = "#sec" id = "btn"> More Info </a>
+			<img src = "mountains_front.png" id = "mountains_front">
+		</section>
+		<section class = "sec1">
+			<div class = "sec" id = "sec">
+				<h2> About Us</h2>
+				<p> Hello! We are Ecomemrce <br>
+					We mainly strive to sell books and lightnovels <br>
+			</div>
+		</section>
+		<section class = "sec2">
+			<div class = "hobby" id = "hobby">
+				<h2> Company Details </h2>
+				<ul>
+					<li> Employee </li>
+						<p class = "games"> 
+							we are a small business so we have just a few employees<br><br>
+							<u><b> they are </b></u> <br>
+							rinoa <br> rochelle <br> carmona <br>
+							person1 <br> person2 <br>
+							Cinderella Phenomenon <br><br>
+							
+					<li> Contact us </li>
+					<p class = "books">
+						contact us at ecommerce@gmail.com or at <br>
+						099191919191 or on our social media <br>
+						ecommerce books</p> <br> <br>
+					
+				</ul>
+			</div>
+		</section>
+		<script>
+			let stars = document.getElementById('stars');
+			let moon = document.getElementById('moon');
+			let mountains_behind = document.getElementById('mountains_behind');
+			let text = document.getElementById('text');
+			let btn = document.getElementById('btn');
+			let mountains_front = document.getElementById('mountains_front');
+			let header = document.querySelector('header');
+			
+			window.addEventListener('scroll', function(){
+				let value = window.scrollY;
+				stars.style.left = value * 0.25 + 'px';
+				moon.style.top = value * 1.05 + 'px';
+				mountains_behind.style.top = value * 0.5 + 'px';
+				mountains_front.style.top = value * 0 + 'px';
+				text.style.marginRight = value * 4 + 'px';
+				text.style.marginTop = value * 1.5 + 'px';
+				btn.style.marginTop = value * 1.5 + 'px';
+				header.style.top = value * 0.5 + 'px';
+				
+			})
+		</script>
+	</body>
+</html>
